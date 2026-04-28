@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人主页</title>
+    <style>
+        /* 这里是 CSS 样式部分，负责网页的美观 */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        .container {
+            max-width: 800px;
+            margin: -30px auto 40px; /* 让卡片稍微往上叠一点 */
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #764ba2;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #764ba2;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background-color: #5a387e;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #888;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 网页头部 -->
+    <header>
+        <h1>你好，我是 [你的名字] 👋</h1>
+        <p>一名热爱技术与创造的开发者</p>
+    </header>
+
+    <!-- 网页主要内容区 -->
+    <div class="container">
+        <section>
+            <h2>关于我</h2>
+            <p>欢迎来到我的个人空间！这是我使用 GitHub Pages 搭建的第一个静态网站。我平时喜欢钻研前端技术、写代码以及分享生活中的点滴。</p>
+        </section>
+
+        <section>
+            <h2>我的项目</h2>
+            <p>这里展示我近期正在做的一些有趣的项目：</p>
+            <ul>
+                <li><strong>个人博客：</strong> 记录学习笔记与生活感悟。</li>
+                <li><strong>开源工具：</strong> 分享一些提高效率的小脚本。</li>
+                <li><strong>摄影作品：</strong> 用镜头捕捉城市与自然的瞬间。</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>联系我</h2>
+            <p>如果你对我的项目感兴趣，或者想交个朋友，欢迎通过以下方式联系我：</p>
+            <a href="mailto:your-email@example.com" class="btn">发送邮件</a>
+            <a href="https://github.com/你的用户名" target="_blank" class="btn">访问我的 GitHub</a>
+        </section>
+    </div>
+
+    <!-- 网页底部 -->
+    <footer id="footer">
+        <!-- 年份将由下方的 JavaScript 自动生成 -->
+    </footer>
+
+    <script>
+        // 这里是 JavaScript 部分，负责网页的简单交互
+        document.addEventListener('DOMContentLoaded', function() {
+            // 自动在页脚添加当前年份和版权信息
+            const currentYear = new Date().getFullYear();
+            const footer = document.getElementById('footer');
+            footer.innerHTML = `&copy; ${currentYear} [你的名字]. 使用 GitHub Pages 搭建 ❤️`;
+            
+            console.log("网页加载成功！欢迎来我的个人主页做客。");
+        });
+    </script>
+
+</body>
+</html>
