@@ -30,12 +30,18 @@
 
 - **技术栈**：`Python` · `Tornado` · `GLM-4-9B-Chat` · `LoRA` · `TF-IDF` · `RAG`
 
-#### 架构
-用户浏览器 → Tornado Web Server → RAG 引擎
-├─ 知识库检索 (TF-IDF)
-└─ 模型推理 (GLM-4 + LoRA)
+#### 架构（Mermaid 图）
 
-
+```mermaid
+graph TD
+    A[用户浏览器] -->|HTTP 请求| B[Tornado Web Server]
+    B --> C{RAG 引擎}
+    C --> D[知识库检索<br/>TF-IDF]
+    C --> E[模型推理<br/>GLM-4 + LoRA]
+    D --> E
+    E --> F[生成回答]
+    F --> B
+    B -->|响应| A
 #### 关键特性
 
 - LoRA 微调，仅训练 0.11% 参数（r=16）  
