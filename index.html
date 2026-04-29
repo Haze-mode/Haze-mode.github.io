@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liduo - 应用开发工程师</title>
     <style>
-        /* 基础样式 */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
@@ -43,7 +42,6 @@
             padding-bottom: 10px;
             margin-top: 2rem;
         }
-        /* 项目卡片样式 */
         .project-card {
             background: #f8f9fa;
             border-left: 4px solid #667eea;
@@ -71,7 +69,6 @@
             font-size: 0.8rem;
             margin-right: 5px;
         }
-        /* 按钮样式 */
         .btn {
             display: inline-block;
             background-color: #764ba2;
@@ -105,77 +102,68 @@
 </head>
 <body>
 
-    <!-- 网页头部 -->
     <header>
         <h1>你好，我是 Liduo 👋</h1>
-        <p>应用开发工程师 · 全栈实践者</p>
+        <p>应用开发工程师 · 注重工程实用性</p>
     </header>
 
-    <!-- 网页主要内容区 -->
     <div class="container">
-        <!-- 关于我 -->
         <section>
             <h2>关于我</h2>
             <p>
-                我是一名专注于应用开发的工程师，擅长从零构建完整的Web应用与AI集成系统。
-                喜欢将大语言模型（LLM）与实际业务场景结合，创造能真正解决问题的产品。
+                我是一名应用开发工程师，擅长从零构建完整的 Web 应用与 AI 集成系统。
+                关注如何将大语言模型（LLM）落地为实际可用的产品，同时不回避工程中的限制与取舍。
                 这里展示了我近期完成的两个代表性项目。
             </p>
         </section>
 
-        <!-- 我的项目 -->
         <section>
             <h2>我的项目</h2>
-            
+
             <!-- 项目一：党建问答系统 -->
             <div class="project-card">
                 <h3>基于 GLM-4 的党建智能问答系统</h3>
-                <p>毕业设计项目，构建了集模型微调、知识库检索、Web交互于一体的完整RAG系统。</p>
+                <p>毕业设计项目，集成模型微调（LoRA）与知识库检索增强（RAG），支持多轮对话与流式输出。</p>
                 <div class="project-tags">
                     <span class="tag">Python</span>
                     <span class="tag">Tornado</span>
                     <span class="tag">GLM-4</span>
                     <span class="tag">LoRA</span>
-                    <span class="tag">FAISS</span>
+                    <span class="tag">TF-IDF</span>
                     <span class="tag">RAG</span>
                 </div>
                 <a href="project-party.html" class="btn btn-outline">查看项目详情 →</a>
             </div>
 
-            <!-- 项目二：个人云笔记平台（示例） -->
+            <!-- 项目二：持续开发中 / 个人云笔记平台 -->
             <div class="project-card">
-                <h3>个人云笔记平台 (Docker化部署)</h3>
-                <p>使用 Django REST Framework + Vue3 构建的Markdown实时预览笔记应用，支持Docker Compose一键部署。</p>
+                <h3>更多项目开发中</h3>
+                <p>目前正在探索 Docker 化部署的全栈应用，使用 Django / Vue 等技术栈，后续会陆续更新到 GitHub。</p>
                 <div class="project-tags">
                     <span class="tag">Django</span>
                     <span class="tag">Vue3</span>
-                    <span class="tag">PostgreSQL</span>
                     <span class="tag">Docker</span>
+                    <span class="tag">PostgreSQL</span>
                 </div>
-                <a href="#" class="btn btn-outline">即将上线</a>
+                <a href="https://github.com/Haze-mode/" target="_blank" class="btn btn-outline">查看 GitHub 动态</a>
             </div>
         </section>
 
-        <!-- 联系我 -->
         <section>
             <h2>联系我</h2>
             <p>如果你对我的项目感兴趣，或者想交流技术，欢迎通过以下方式联系我：</p>
-            <a href="mailto" class="btn">发送邮件</a>
+            <!-- 记得把 mailto 后面的邮箱替换成你自己的 -->
+            <a href="mailto:your-email@example.com" class="btn">发送邮件</a>
             <a href="https://github.com/Haze-mode/" target="_blank" class="btn">访问我的 GitHub</a>
         </section>
     </div>
 
-    <!-- 网页底部 -->
-    <footer id="footer">
-        <!-- 年份将由下方的 JavaScript 自动生成 -->
-    </footer>
+    <footer id="footer"></footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // 自动在页脚添加当前年份和版权信息
             const currentYear = new Date().getFullYear();
-            const footer = document.getElementById('footer');
-            footer.innerHTML = `&copy; ${currentYear} . 使用 GitHub Pages 搭建 ❤️`;
+            document.getElementById('footer').innerHTML = `&copy; ${currentYear} Liduo. 使用 GitHub Pages 搭建 ❤️`;
         });
     </script>
 </body>
